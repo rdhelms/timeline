@@ -1,1 +1,172 @@
 // Timeline
+@import 'partials/reset';
+@import 'partials/variables';
+@import 'partials/mixins';
+
+hr {
+  margin: 10px auto 20px auto;
+  height: 1px;
+  background: #a6d8f4;
+  border: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+h2 {
+  line-height: 30px;
+}
+
+.timeline {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  // background: pink;
+}
+
+.postInfo {
+  display: flex;
+  // background: green;
+}
+
+.timeStamp {
+  width: 150px;
+  // background: gray;
+  text-align: right;
+
+  span {
+    &.date {
+      font-size: 12px;
+      color: #bbb;
+      // background: blue;
+    }
+    &.time {
+      font-size: 40px;
+      // color: #6cbfee;
+    }
+  }
+}
+
+.line {
+  position: relative;
+  top: 20px;
+  display: flex;
+  justify-content: center;
+  width: 7px;
+  margin: 0 50px 0 30px;
+  background: $lineColor;
+    i {
+      z-index: 2;
+      position: relative;
+      top: -25px;
+      border: 5px solid #afdcf8;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 50px;
+      height: 50px;
+      background: $iconColor;
+      color:white;
+      // font-size: 40px;
+    }
+}
+
+.postText {
+  position: relative;
+  padding: 40px;
+  margin-bottom: 20px;
+  width: 85%;
+  border-radius: 10px;
+  line-height: 22px;
+  color: #fff;
+  .triangle {
+    position: absolute;
+    top: 10px;
+    left: -10px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 10px 10px 10px 0;
+  }
+}
+
+.mobile {
+  i {
+    font-size: 35px;
+  }
+}
+
+.desktop {
+  i {
+    padding-top: 5px;
+    font-size: 25px;
+  }
+}
+
+.light {
+  .time {
+    color: $lightPostColor;
+  }
+  .triangle {
+    border-color: transparent $lightPostColor transparent transparent;
+  }
+  .postText {
+    background: $lightPostColor;
+  }
+}
+
+.dark {
+  .time {
+    color: $darkPostColor;
+  }
+  .triangle {
+    border-color: transparent $darkPostColor transparent transparent;
+  }
+  .postText {
+    background: $darkPostColor;
+  }
+}
+
+@include media(mobile) {
+  body {
+    padding: 0;
+  }
+  .timeline {
+    width: 100%;
+  }
+  .postInfo {
+    flex-direction: column;
+    align-items: center;
+  }
+  .timeStamp {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: -20px;
+  }
+  .line {
+    top: 15px;
+    // background: none;
+    i {
+      top: 10px;
+    }
+  }
+  .triangle {
+    display: none;
+  }
+}
+@include media(tablet) {
+  body {
+    padding: 20px 20px 0 0;
+  }
+  .timeline {
+    width: 100%;
+  }
+}
+@include media(desktop) {
+  .timeline {
+    width: 75%;
+  }
+}

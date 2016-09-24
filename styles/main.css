@@ -1,0 +1,137 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+  box-sizing: border-box; }
+
+html, body {
+  width: 100%;
+  height: 100%; }
+
+body {
+  padding: 50px; }
+
+hr {
+  margin: 10px auto 20px auto;
+  height: 1px;
+  background: #a6d8f4;
+  border: 0; }
+
+ul {
+  list-style: none; }
+
+h2 {
+  line-height: 30px; }
+
+.timeline {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto; }
+
+.postInfo {
+  display: flex; }
+
+.timeStamp {
+  width: 150px;
+  text-align: right; }
+  .timeStamp span.date {
+    font-size: 12px;
+    color: #bbb; }
+  .timeStamp span.time {
+    font-size: 40px; }
+
+.line {
+  position: relative;
+  top: 20px;
+  display: flex;
+  justify-content: center;
+  width: 7px;
+  margin: 0 50px 0 30px;
+  background: #afdcf8; }
+  .line i {
+    z-index: 2;
+    position: relative;
+    top: -25px;
+    border: 5px solid #afdcf8;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    background: #46a4da;
+    color: white; }
+
+.postText {
+  position: relative;
+  padding: 40px;
+  margin-bottom: 20px;
+  width: 85%;
+  border-radius: 10px;
+  line-height: 22px;
+  color: #fff; }
+  .postText .triangle {
+    position: absolute;
+    top: 10px;
+    left: -10px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 10px 10px 10px 0; }
+
+.mobile i {
+  font-size: 35px; }
+
+.desktop i {
+  padding-top: 5px;
+  font-size: 25px; }
+
+.light .time {
+  color: #6cbfee; }
+.light .triangle {
+  border-color: transparent #6cbfee transparent transparent; }
+.light .postText {
+  background: #6cbfee; }
+
+.dark .time {
+  color: #3594cb; }
+.dark .triangle {
+  border-color: transparent #3594cb transparent transparent; }
+.dark .postText {
+  background: #3594cb; }
+
+@media only screen and (max-width: 720px) {
+  body {
+    padding: 0; }
+
+  .timeline {
+    width: 100%; }
+
+  .postInfo {
+    flex-direction: column;
+    align-items: center; }
+
+  .timeStamp {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: -20px; }
+
+  .line {
+    top: 15px; }
+    .line i {
+      top: 10px; }
+
+  .triangle {
+    display: none; } }
+@media only screen and (max-width: 1080px) and (min-width: 720px) {
+  body {
+    padding: 20px 20px 0 0; }
+
+  .timeline {
+    width: 100%; } }
+@media only screen and (min-width: 1080px) {
+  .timeline {
+    width: 75%; } }
+
+/*# sourceMappingURL=main.css.map */
