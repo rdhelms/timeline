@@ -1,0 +1,76 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif; }
+
+html, body, main {
+  width: 100%;
+  height: 100%; }
+
+.post {
+  width: 80%;
+  margin: 60px auto; }
+  .post:nth-child(2) article {
+    background: #3594cb; }
+  .post article {
+    position: relative;
+    float: right;
+    width: 75%;
+    background: #6cbfee;
+    color: white;
+    padding: 25px;
+    border-radius: 5px;
+    line-height: 1.5em;
+    margin-bottom: 20px; }
+    .post article p {
+      margin: 10px; }
+    .post article h2 {
+      margin: 10px; }
+    .post article hr {
+      border: 1px solid white;
+      margin: auto 10px; }
+  .post .time {
+    position: absolute;
+    top: -5px;
+    left: -200px;
+    text-align: right;
+    width: 100px; }
+    .post .time span {
+      float: right;
+      width: 100%; }
+      .post .time span:nth-child(1) {
+        font-size: 12px;
+        color: gray;
+        margin-bottom: 5px; }
+      .post .time span:nth-child(2) {
+        font-size: 40px;
+        color: #3594cb; }
+  .post .line {
+    position: absolute;
+    left: -55px;
+    height: 100%;
+    width: 5px;
+    background: lightblue; }
+    .post .line .icon {
+      position: absolute;
+      width: 60px;
+      height: 60px;
+      line-height: 50px;
+      vertical-align: middle;
+      font-size: 200%;
+      text-align: center;
+      transform: translate(-28px, -50%);
+      background: #3594cb;
+      border: 7px solid lightblue;
+      border-radius: 50%;
+      color: white; }
+
+@media only screen and (max-width: 1080px) {
+  .post {
+    width: 90%; } }
+@media only screen and (max-width: 720px) {
+  .post {
+    width: 90%; } }
+
+/*# sourceMappingURL=main.css.map */
